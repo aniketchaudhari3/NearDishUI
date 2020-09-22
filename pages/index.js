@@ -13,6 +13,8 @@ export default function Home() {
           Welcome to <a href="#">Foodex</a>
         </h1>
 
+<br />
+<center> Comming Soon in Nandurbar</center>
 </>
   )
 }
