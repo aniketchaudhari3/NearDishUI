@@ -39,3 +39,14 @@ font-size: 10px !important;
 
   margin-bottom: 25%;
 }
+
+.promoted{
+  position: absolute;
+    top: 3px;
+    left: 3px;
+    text-transform: uppercase;
+    font-size: .75rem !important;
+    font-weight: 500;
+    line-height: 1;
+    
+}
