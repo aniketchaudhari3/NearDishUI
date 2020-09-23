@@ -14,3 +14,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.rating{
+  padding-top:7px;
+}
+
+
+
+.hotel_card{
+  height:100%;
+  /* width:50%; */
+}
+
+
+.MuiBox-root{
+padding: 10px !important;
+}
+/* 
+.hotel_type{
+font-size: 10px !important;
+} */
+
+.bottom_20{
+
+  margin-bottom: 25%;
+}

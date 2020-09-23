@@ -1,7 +1,44 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import BottomNav from './bottom_nav.js';
+
+import HotelCard from "./HotelCard.js";
+import Grid from '@material-ui/core/Grid';
+import Container from "@material-ui/core/Container";
 
 export default function Home() {
+ 
+  const Hotels = [
+    { id:1,
+      name: "Gajraj Park",
+      Type: "Indian Pure Veg",
+    },
+    {
+      id:2,
+      name: "Hera Garden",
+      Type: "Mughlai, Biryani, Punjabi, Chinese",
+    },
+    {
+      id:3,
+      name: "Hotel Garjana",
+      Type: "North Indian, Thalis",
+    },
+    {
+      id:4,
+      name: "Hera",
+      Type: "Fast Food, Maharashtrian, North Indian",
+    },
+    {
+      id:5,
+      name: "Kaka ka Dabha",
+      Type: "Indian, Chinese",
+    }
+  ];
+
+
+
+
+ 
   return (
   <>
   <Head>
@@ -15,6 +52,30 @@ export default function Home() {
 
 <br />
 <center> Comming Soon in Nandurbar</center>
+<Container maxWidth="sm" className="bottom_20">
+
+<Grid item 
+           container
+           direction="row"
+           spacing={1}
+           className="scroll">
+
+{
+Hotels.map((Hotel, index) => (
+<Grid  key={index} item xs >
+         
+<HotelCard key={Hotel.id} HotelName={Hotel.name} rating={index} Type={Hotel.Type} />
+
+</Grid> 
+
+
+))}
+    </Grid> 
+
+  </Container>
+
+<BottomNav />
+
 </>
   )
 }
