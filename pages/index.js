@@ -32,6 +32,11 @@ export default function Home() {
       id:5,
       name: "Kaka ka Dabha",
       Type: "Indian, Chinese",
+    },
+    {
+      id:6,
+      name: "Hotel Raj",
+      Type: "Indian, Chinese",
     }
   ];
 
