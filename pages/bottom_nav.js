@@ -7,6 +7,10 @@ import Home from '@material-ui/icons/Home';
 import AccountBox from '@material-ui/icons/AccountBox';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+
 const useStyles = makeStyles({
   root: {
     width: 500,
@@ -19,23 +23,51 @@ const useStyles = makeStyles({
   },
 });
 
-export default function bottom_nav() {
+export default function bottom_nav(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(props.currentValue);
+  const router = useRouter()
+
+
+  const BottomLink = React.forwardRef((props, ref) =>
+   
+ 
+   <Link href={props.href} as={props.href} >
+      <a className={props.className}>
+        {props.children}
+      </a>
+    </Link>
+
+ )
+  
 
   return (
+    <>
+
     <BottomNavigation
       value={value}
+    
       onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
+      setValue(newValue);
+        
+    }}
+      
+ 
       showLabels
       className={classes.bottomBar}
     >
-      <BottomNavigationAction label="Home" icon={<Home />} />
-      <BottomNavigationAction label="Search" icon={<Search />} />
-      <BottomNavigationAction label="Cart" icon={<ShoppingBasket />} />
-      <BottomNavigationAction label="Profile" icon={<AccountBox />} />
+
+    
+ <BottomNavigationAction label="Home" icon={ <Home />}  component={BottomLink} href={'/'} /> 
+       <BottomNavigationAction   label="Search" icon={<Search />}  component={BottomLink} href="/Search" />
+       <BottomNavigationAction   label="Cart" icon={<ShoppingBasket />} component={BottomLink} href={'/about'} />
+      <BottomNavigationAction  label="Profile" icon={<AccountBox />}  component={BottomLink} href={'/about'} />
     </BottomNavigation>
-  );
+
+
+
+
+
+</> 
+ );
 }

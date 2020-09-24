@@ -91,7 +91,7 @@ Hotels.map((Hotel, index) => (
 
   </Container>
 
-<BottomNav />
+<BottomNav currentValue={0} />
 
 </>
   )
