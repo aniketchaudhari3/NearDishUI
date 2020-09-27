@@ -39,7 +39,18 @@ font-size: 10px !important;
 
 .bottom_20{
 
-  margin-bottom: 25%;
+  padding-bottom: 25%;
+}
+
+.app_color{
+  background-color:#448aff !important;
+}
+.right_pad_0{
+  padding-right: 0px !important;
+}
+.top_20{
+
+  padding-top: 60px;
 }
 
 .promoted{

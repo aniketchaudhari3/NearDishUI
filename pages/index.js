@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import BottomNav from './bottom_nav.js';
+import Nav from './MainNav.js';
 
 import HotelCard from "./HotelCard.js";
 import Grid from '@material-ui/core/Grid';
@@ -62,14 +63,10 @@ export default function Home() {
         <title>Foodex | Hungry</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-        <h1 className={styles.title}>
-          Welcome to <a href="#">Foodex</a>
-        </h1>
+<Nav />
 
 <br />
-<center> Comming Soon in Nandurbar</center>
-<Container maxWidth="sm" className="bottom_20">
+<Container maxWidth="sm" className="bottom_20 top_20">
 
 <Grid item 
            container
