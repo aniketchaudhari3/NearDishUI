@@ -134,7 +134,7 @@ export default function Search() {
 Search.map((search, index) => (
          
 
-<SearchCard name={search.name} item_name={search.item_name}/>
+<SearchCard key={index} name={search.name} item_name={search.item_name}/>
 
 
 ))}

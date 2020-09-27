@@ -60,8 +60,8 @@ export default function bottom_nav(props) {
     
  <BottomNavigationAction label="Home" icon={ <Home />}  component={BottomLink} href={'/'} /> 
        <BottomNavigationAction   label="Search" icon={<Search />}  component={BottomLink} href="/Search" />
-       <BottomNavigationAction   label="Cart" icon={<ShoppingBasket />} component={BottomLink} href={'/about'} />
-      <BottomNavigationAction  label="Profile" icon={<AccountBox />}  component={BottomLink} href={'/about'} />
+       <BottomNavigationAction   label="Cart" icon={<ShoppingBasket />} component={BottomLink} href={'/Cart'} />
+      <BottomNavigationAction  label="Profile" icon={<AccountBox />}  component={BottomLink} href={'/Profile'} />
     </BottomNavigation>
 
 
