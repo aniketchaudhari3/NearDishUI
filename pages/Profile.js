@@ -7,7 +7,8 @@ export default function Profile() {
     return (
         <div>
         <Nav />
-            <h1>Profile Page</h1>
+        <div class=" top_20"> <h1>Profile Page</h1></div>
+           
       <BottomNav currentValue={3} />
         </div>
     )
