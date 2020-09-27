@@ -9,20 +9,10 @@ import InputBase from '@material-ui/core/InputBase';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import BottomNav from './bottom_nav.js'
+import SearchCard from './Search_card.js';
+
 
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-  },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -35,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
+      width: '91%',
     },
   },
   searchIcon: {
@@ -61,12 +51,6 @@ const useStyles = makeStyles((theme) => ({
       width: '20ch',
     },
   },
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
-  },
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
@@ -80,7 +64,47 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Search() {
   const classes = useStyles();
- 
+
+  
+  
+  const Search = [
+    { id:1,
+      name: "Dish",
+      item_name: "Man Churian",
+
+    },
+    {
+      id:2,
+      name: "Dish",
+      item_name: "Shev Bhaji",
+
+    },
+    {
+      id:3,
+      name: "Resutaurant",
+      item_name: "Hotel Garjana",
+
+    },
+    {
+      id:4,
+      name: "Restaurant",
+      item_name: "Raj Hotel",
+
+    },
+    {
+      id:5,
+      name: "Dish",
+      item_name: "Chicken Chali",
+    },
+    {
+      id:6,
+      name: "Disk",
+      item_name: "Peneer Chali",
+
+    }
+  ];
+
+
 
 
   return (
@@ -104,7 +128,21 @@ export default function Search() {
         </Toolbar>
       </AppBar>
     </div>
- 
+ <div class="container bottom_20">
+
+ {
+Search.map((search, index) => (
+         
+
+<SearchCard name={search.name} item_name={search.item_name}/>
+
+
+))}
+
+
+
+</div>
+
  <BottomNav  currentValue={1}/>
 
 </> 
