@@ -7,7 +7,7 @@ export default function Cart() {
     return (
         <>
           <Nav pageName="Cart" />
-          <div class=" top_20">
+          <div>
             <h1>Cart Page</h1>
             </div>
       <BottomNav currentValue={2} />

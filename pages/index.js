@@ -69,7 +69,7 @@ export default function Home() {
 <Nav pageName="Near Dish" />
 
 <br />
-<Container maxWidth="sm" className="bottom_20 top_20">
+<Container maxWidth="sm" className="bottom_20">
 
 <Grid item 
            container
