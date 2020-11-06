@@ -22,7 +22,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>NearBom | Search It</title>
+        <title>NearDish | Search It</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width , maximum-scale=1, user-scalable=no"/>
       </Head>
       {/* <ThemeProvider theme={theme}> */}
