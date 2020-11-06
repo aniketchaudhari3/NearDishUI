@@ -7,6 +7,7 @@ import HotelCard from "./HotelCard.js";
 import Grid from '@material-ui/core/Grid';
 import Container from "@material-ui/core/Container";
 
+
 export default function Home() {
  
   const Hotels = [
@@ -54,16 +55,18 @@ export default function Home() {
   ];
 
 
-
-
+  React.useEffect(() => {
+    // window is accessible here.
+    // window.location.href = "/about"
+  }, []);
  
   return (
   <>
   <Head>
-        <title>Foodex | Hungry</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>NearDish | Hungry</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
-<Nav />
+<Nav pageName="Near Dish" />
 
 <br />
 <Container maxWidth="sm" className="bottom_20 top_20">

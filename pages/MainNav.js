@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import LocationOn from '@material-ui/icons/LocationOn';
+import LocalOffer from '@material-ui/icons/LocalOffer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,25 +21,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MainNav() {
+export default function MainNav(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <React.Fragment>
       <AppBar position="fixed" className="app_color">
         <Toolbar className="right_pad_0">
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-        Tejas
+        {props.pageName } 
           </Typography>
           <IconButton color="inherit" >
-            <LocationOn />
+            <LocalOffer />
           </IconButton>
-    
-        </Toolbar>
+     </Toolbar>
       </AppBar>
-    </div>
+  
+      <Toolbar />
+      </React.Fragment>
+
   );
 }

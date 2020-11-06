@@ -6,7 +6,7 @@ import Nav from './MainNav.js';
 export default function Cart() {
     return (
         <>
-          <Nav />
+          <Nav pageName="Cart" />
           <div class=" top_20">
             <h1>Cart Page</h1>
             </div>
