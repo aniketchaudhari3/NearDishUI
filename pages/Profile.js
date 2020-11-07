@@ -2,6 +2,7 @@ import React from 'react'
 import BottomNav from './bottom_nav';
 import Nav from './MainNav.js';
 import Container from '@material-ui/core/Container';
+import Head from 'next/head'
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,7 +14,7 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 
 import Avatar from '@material-ui/core/Avatar';
-import { deepOrange, deepPurple } from '@material-ui/core/colors';
+import { deepPurple } from '@material-ui/core/colors';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -45,19 +46,33 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+var name = "Tejas Chaudhari";
+var matches = name.match(/\b(\w)/g); // ['J','S','O','N']
+var short_name = matches.join(''); // JSON
+
+
+
 export default function Profile() {
   
   const classes = useStyles();
 
   return (
+
+
         <div>
+
+<Head>
+        <title>Tejas Chaudhari  |NearDish</title>
+      </Head>
+
         <Nav pageName="Profile" />
         
         <Container>
 
         <div className={classes.root2}>
       
-      <Avatar className={classes.large}>TC</Avatar>
+      <Avatar className={classes.large}>{short_name}</Avatar>
    
 <div className="right">
       <h1>Tejas Chaudhari </h1>
@@ -67,21 +82,22 @@ export default function Profile() {
 </div>
 
 
+
+<p> ACTIVITY</p>
+
       <List component="nav" className={classes.root} aria-label="mailbox folders">
       <ListItem button>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Recently Viewed" />
       </ListItem>
       <Divider />
       <ListItem button divider>
-        <ListItemText primary="Drafts" />
+        <ListItemText primary="Offers" />
       </ListItem>
       <ListItem button>
-        <ListItemText primary="Trash" />
+        <ListItemText primary="Favourites" />
       </ListItem>
       <Divider light />
-      <ListItem button>
-        <ListItemText primary="Spam" />
-      </ListItem>
+  
     </List>
 
 <p> Online Ordering</p>
@@ -89,19 +105,18 @@ export default function Profile() {
 
 <List component="nav" className={classes.root} aria-label="mailbox folders">
       <ListItem button>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Order History" />
       </ListItem>
       <Divider />
       <ListItem button divider>
-        <ListItemText primary="Drafts" />
+        <ListItemText primary="My Addresses" />
       </ListItem>
-      <ListItem button>
-        <ListItemText primary="Trash" />
-      </ListItem>
+      
       <Divider light />
       <ListItem button>
-        <ListItemText primary="Spam" />
+        <ListItemText primary="Favorite Order" />
       </ListItem>
+      <Divider light />
     </List>
 
 <p> Support</p>
@@ -109,20 +124,10 @@ export default function Profile() {
 
 <List component="nav" className={classes.root} aria-label="mailbox folders">
       <ListItem button>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Send Feedback" />
       </ListItem>
       <Divider />
-      <ListItem button divider>
-        <ListItemText primary="Drafts" />
-      </ListItem>
-      <ListItem button>
-        <ListItemText primary="Trash" />
-      </ListItem>
-      <Divider light />
-      <ListItem button>
-        <ListItemText primary="Spam" />
-      </ListItem>
-   
+     
     </List>
     <br/>
   <Divider  />
