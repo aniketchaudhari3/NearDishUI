@@ -125,7 +125,7 @@ export default function Search() {
         </Toolbar>
       </AppBar>
     </div>
- <div class="container bottom_20">
+ <div className="container bottom_20">
 
  {
 Search.map((search, index) => (
