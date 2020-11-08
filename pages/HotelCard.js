@@ -9,9 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 
 import Rating from '@material-ui/lab/Rating';
-import Hidden from '@material-ui/core/Hidden';
-
-import Alert from '@material-ui/lab/Alert';
+import Link from 'next/link'
 
 const useStyles = makeStyles({
 
@@ -35,7 +33,7 @@ promote =   <Chip  color='primary' size='small' label='Promoted' className='prom
     return (
         <>
 
-
+<Link href={"/hotel/"+props.hotelId}>
 <Card className="hotel_card">
       <CardActionArea>
         <CardMedia
@@ -60,15 +58,11 @@ promote =   <Chip  color='primary' size='small' label='Promoted' className='prom
   
         <Rating name="read-only" value={props.rating} readOnly />
       </div>
-  {/*   
-      <Alert variant="filled" >
-30% off | use Gajraj20
-</Alert>
-  */}
+    
         </CardContent>
       </CardActionArea>
     </Card>
-
+    </Link>
         </>
     )
 }

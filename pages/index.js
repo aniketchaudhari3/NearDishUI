@@ -81,7 +81,7 @@ export default function Home() {
 Hotels.map((Hotel, index) => (
 <Grid  key={index} item xs >
          
-<HotelCard key={Hotel.id} HotelName={Hotel.name} rating={Hotel.rating} Type={Hotel.Type} promote={Hotel.promote} />
+<HotelCard key={Hotel.id} hotelId={Hotel.id} HotelName={Hotel.name} rating={Hotel.rating} Type={Hotel.Type} promote={Hotel.promote} />
 
 </Grid> 
 

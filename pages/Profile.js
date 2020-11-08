@@ -15,7 +15,7 @@ import Button from '@material-ui/core/Button';
 
 import Avatar from '@material-ui/core/Avatar';
 import { deepPurple } from '@material-ui/core/colors';
-
+import Link from 'next/link'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -123,9 +123,12 @@ export default function Profile() {
 
 
 <List component="nav" className={classes.root} aria-label="mailbox folders">
+<Link href="/Feedback">
+      
       <ListItem button>
         <ListItemText primary="Send Feedback" />
       </ListItem>
+      </Link>
       <Divider />
      
     </List>
