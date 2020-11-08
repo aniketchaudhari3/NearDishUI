@@ -48,8 +48,8 @@ export default function index() {
   const router = useRouter();
 
   const [state, setState] = React.useState({
-    checkedA: true,  
-    checkedB: true,
+  
+    checkedB: false,
   });
 
   const handleChange = (event) => {

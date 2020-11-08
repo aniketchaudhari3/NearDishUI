@@ -9,11 +9,17 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles({
   root: {
     width: '100%',
-    background:'red'
+    // background:'red',
+    justifyContent: 'space-between'
   },
   button: {
     margin:'7px',
   },
+  price:{
+
+fontSize: '20px',
+paddingLeft: '15px',
+  }
 });
 
 export default function CartNav() {
@@ -28,13 +34,16 @@ export default function CartNav() {
       }}
       showLabels
       className={classes.root}
-    >
-        
+      >
+
+<p className={classes.price}>$210</p>
+
          <Button
         variant="contained"
         color="primary"
         className={classes.button}
         endIcon={<Send />}
+        
       >
         Continue
         
