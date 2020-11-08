@@ -158,6 +158,7 @@ Chai Tapri
 <p className="center">LIC No : 21519077000158 </p>
 
       </div>
+      <br/><br/><br/>
 
 <CartNav />
 

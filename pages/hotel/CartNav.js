@@ -10,10 +10,19 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
     // background:'red',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+      top: 'auto',
+      bottom: 0,
+      width:"100%",
+      position: "fixed",
+      boxShadow:"0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
+    
   },
   button: {
     margin:'7px',
+    paddingLeft: '30px',
+    paddingRight: '30px',
+
   },
   price:{
 
