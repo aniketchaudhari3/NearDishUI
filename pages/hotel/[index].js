@@ -10,10 +10,14 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Divider from '@material-ui/core/Divider';
 
 
-import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+
+import CartNav from './CartNav.js';
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root2: {
@@ -63,7 +67,20 @@ export default function index() {
 
       <SubNav pageName={router.query.index} />
 
+<div className="container">
+      <Typography variant="h3" component="h3" gutterBottom>
+Chai Tapri
+      </Typography>
+    <p>
+      Best Punjabi Food
+    </p>
+    <small>
+      Nandurbar Locality 
+    </small>
+</div>
+
       <div className={classes.root2}>
+
         <Paper>
         
         <FormControlLabel
@@ -138,7 +155,12 @@ export default function index() {
 
     </div>
 
+<p className="center">LIC No : 21519077000158 </p>
+
       </div>
+
+<CartNav />
+
     </>
   );
 }
