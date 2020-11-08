@@ -17,7 +17,10 @@ import Typography from '@material-ui/core/Typography';
 import CartNav from './CartNav.js';
 
 
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
+import RestaurantMenu from '@material-ui/icons/RestaurantMenu';
 
 const useStyles = makeStyles((theme) => ({
   root2: {
@@ -52,9 +55,21 @@ export default function index() {
     checkedB: false,
   });
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+
+  const ITEM_HEIGHT = 48;
 
   console.log(router.query.index);
 
@@ -158,6 +173,29 @@ Chai Tapri
 <p className="center">LIC No : 21519077000158 </p>
 
       </div>
+
+      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}  className="menu"  color="primary" variant="contained"   startIcon={<RestaurantMenu />} >
+        Menu
+      </Button>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        PaperProps={{
+          style: {
+            maxHeight: ITEM_HEIGHT * 8.5,
+            width: '20ch',
+          },
+        }}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+   
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
+
       <br/><br/><br/>
 
 <CartNav />
