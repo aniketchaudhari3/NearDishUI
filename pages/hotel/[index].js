@@ -452,17 +452,14 @@ export default function index() {
           },
         }}
       >
-        <MenuItem onClick={() => {
-                           handleClose()
-                           props?.children[0]?.click()
-                          }}><a  href="#ice">Ice</a></MenuItem>
+        <MenuItem onClick={handleClose}><a  href="#ice">Ice</a></MenuItem>
 
-        <MenuItem onClick={() => {handleClose()}}><a  href="#roti">Roti</a></MenuItem>
-        <MenuItem onClick={() => {handleClose()}}><a  href="#bhaji">Bhaji</a></MenuItem>
+        <LinkItem onClick={handleClose} />
+{/*<MenuItem onClick={() => {handleClose()}}><a  href="#bhaji">Bhaji</a></MenuItem>
         <MenuItem onClick={() => {handleClose()}}><a  href="#chapati">Chapati</a></MenuItem>
         <MenuItem onClick={() => {handleClose()}}><a  href="#tejas">Tejas</a></MenuItem>
         <MenuItem onClick={() => {handleClose()}}><a  href="#pani">Pani</a></MenuItem>
-      </Menu>
+      </Menu>*/}
 
       <br />
       <br />
@@ -471,4 +468,10 @@ export default function index() {
       <CartNav />
     </>
   );
+}
+
+function LinkItem({link}){
+ return (
+   <MenuItem><a href=`#${link.toLowerCase()}`>{link}</a></MenuItem>
+ ) 
 }
